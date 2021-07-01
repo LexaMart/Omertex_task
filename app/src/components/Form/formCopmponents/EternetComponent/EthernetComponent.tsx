@@ -2,16 +2,18 @@ import { RadioButtonsOne } from './components/RadioButtonsIpComponent/RadioButto
 import './Ethernet.css';
 import { IpInputs } from './components/IpInputsComponent/IpInputs';
 import { RadioButtonsTwo } from './components/RadioButtonsDnsComponent/RadioButtonsDns';
+import { DnsInputs } from './components/DnsInputsComponents/DnsInputs';
 
 
 export const EthernetComponent: React.FunctionComponent = () => {
 
   return (
     <div className='ehernet__block'>
-      <label className='block_title'>Ehernet Settings</label>
+      <label className='block_title'>Ethernet Settings</label>
       <RadioButtonsOne />
       <IpInputs />
       <RadioButtonsTwo />
+      <DnsInputs />
     </div>
   )
 }

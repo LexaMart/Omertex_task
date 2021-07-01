@@ -35,6 +35,16 @@ export const useFormEhernetReducer = (state = intialState, action: UserAction): 
         ...state,
         dnsFlag: action.payload
       }
+    case ACTIONS.SET_PREF_DNS:
+      return {
+        ...state,
+        prefDns: action.payload
+      }
+    case ACTIONS.SET_ALTER_DNS:
+      return {
+        ...state,
+        alterDns: action.payload
+      }
     default:
       return state
   }
@@ -63,5 +73,15 @@ export const setDefaultGate = (defGate: string) => ({
 export const setDnsFlag = (setDns: boolean) => ({
   type: ACTIONS.SET_DNS_FLAG,
   payload: setDns
+});
+
+export const setPrefDns = (dns: string) => ({
+  type: ACTIONS.SET_PREF_DNS,
+  payload: dns
+});
+
+export const setAlterDns = (alterDns: string) => ({
+  type: ACTIONS.SET_ALTER_DNS,
+  payload: alterDns
 });
 
