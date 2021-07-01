@@ -1,9 +1,0 @@
-.content__block {
-  display: flex;
-  flex-flow: column;
-  width: 50%;
-  height: 80%;
-  padding: 10px;
-  border-right: 0.5px solid rgba(128, 127, 127, 0.75);
-  border-bottom: 0.5px solid rgba(128, 127, 127, 0.75);
-}
