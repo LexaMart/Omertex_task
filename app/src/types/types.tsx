@@ -1,5 +1,9 @@
 export enum ACTIONS {
-  SET_IP_FLAG = 'SET_IP_FLAG'
+  SET_IP_FLAG = 'SET_IP_FLAG',
+  SET_DNS_FLAG = 'SET_DNS_FLAG',
+  SET_IP_ADDRESS = 'SET_IP_ADDRESS',
+  SET_SUB_MASK = 'SET_SUB_MASK',
+  SET_DEF_GATE = 'SET_DEF_GATE'
 }
 
 export interface FormEthernetState {
