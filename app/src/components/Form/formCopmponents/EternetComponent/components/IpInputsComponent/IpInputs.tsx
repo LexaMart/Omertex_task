@@ -47,9 +47,9 @@ export const IpInputs: React.FunctionComponent = () => {
   }
 
   return (
-    <div className='ip__inputs'>
+    <div className='inputs'>
       <div className='inputs__block'>
-        <label className='input__name required' style={ipFlag ? {} : { opacity: 0.5 }} > IP Address </label>
+        <label className='input__name required' style={ipFlag ? {} : { opacity: 0.5 }} > IP Address: </label>
         <input
           name='ip'
           className='form__input'
@@ -59,7 +59,7 @@ export const IpInputs: React.FunctionComponent = () => {
         />
       </div>
       <div className='inputs__block'>
-        <label className='input__name required' style={ipFlag ? {} : { opacity: 0.5 }} > Subnet Mask </label>
+        <label className='input__name required' style={ipFlag ? {} : { opacity: 0.5 }} > Subnet Mask: </label>
         <input
           name='subnetMask'
           className='form__input'
@@ -69,7 +69,7 @@ export const IpInputs: React.FunctionComponent = () => {
         />
       </div>
       <div className='inputs__block'>
-        <label className='input__name' style={ipFlag ? {} : { opacity: 0.5 }} > Default Gateaway </label>
+        <label className='input__name' style={ipFlag ? {} : { opacity: 0.5 }} > Default Gateaway: </label>
         <input
           name='defGateaway'
           className='form__input'

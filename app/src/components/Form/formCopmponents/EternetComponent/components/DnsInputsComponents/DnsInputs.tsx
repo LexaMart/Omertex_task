@@ -36,9 +36,9 @@ export const DnsInputs: React.FunctionComponent = () => {
   }
 
   return (
-    <div className='ip__inputs'>
+    <div className='inputs'>
       <div className='inputs__block'>
-        <label className='input__name required' style={dnsFlag ? {} : { opacity: 0.5 }} > Preffered DNS server </label>
+        <label className='input__name required' style={dnsFlag ? {} : { opacity: 0.5 }} > Preffered DNS server: </label>
         <input
           name='prefDns'
           className='form__input'
@@ -48,7 +48,7 @@ export const DnsInputs: React.FunctionComponent = () => {
         />
       </div>
       <div className='inputs__block'>
-        <label className='input__name ' style={dnsFlag ? {} : { opacity: 0.5 }} > Alternative DNS server </label>
+        <label className='input__name ' style={dnsFlag ? {} : { opacity: 0.5 }} > Alternative DNS server: </label>
         <input
           name='alterDns'
           className='form__input'

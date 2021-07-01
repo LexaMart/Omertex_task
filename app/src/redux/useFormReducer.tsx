@@ -2,11 +2,13 @@ import { ACTIONS, FormEthernetState, UserAction } from '../types/types'
 const intialState: FormEthernetState = {
   ipFlag: false,
   dnsFlag: false,
+  wifi: false,
   ipAdress: '',
   subMask: '',
   defGateaway: '',
   prefDns: '',
   alterDns: '',
+  wifiName: '',
 }
 export const useFormEhernetReducer = (state = intialState, action: UserAction): FormEthernetState => {
   switch (action.type) {
@@ -45,10 +47,25 @@ export const useFormEhernetReducer = (state = intialState, action: UserAction): 
         ...state,
         alterDns: action.payload
       }
+    case ACTIONS.SET_WIFI_FLAG:
+      return {
+        ...state,
+        wifi: action.payload
+      }
+    case ACTIONS.SET_WIFI_NAME:
+      return {
+        ...state,
+        wifiName: action.payload
+      }
     default:
       return state
   }
 }
+
+export const setWifiFlag = (wifiState: boolean) => ({
+  type: ACTIONS.SET_WIFI_FLAG,
+  payload: wifiState
+})
 
 export const setIpFlag = (ipState: boolean) => ({
   type: ACTIONS.SET_IP_FLAG,
@@ -85,3 +102,7 @@ export const setAlterDns = (alterDns: string) => ({
   payload: alterDns
 });
 
+export const setWifiName = (wifiName: string) => ({
+  type: ACTIONS.SET_WIFI_NAME,
+  payload: wifiName
+});

@@ -8,7 +8,7 @@ import { DnsInputs } from './components/DnsInputsComponents/DnsInputs';
 export const EthernetComponent: React.FunctionComponent = () => {
 
   return (
-    <div className='ehernet__block'>
+    <div className='content__block'>
       <label className='block_title'>Ethernet Settings</label>
       <RadioButtonsOne />
       <IpInputs />
