@@ -1,9 +1,10 @@
 import './App.css';
+import { Form } from './components/Form/Form';
 
-const App: React.FunctionComponent = () => {
+export const App: React.FunctionComponent = () => {
   return (
-    <div>Omertex project</div>
+    <div className='wrapper'>
+      <Form />
+    </div>
   )
 }
-
-export default App;
