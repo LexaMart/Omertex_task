@@ -1,0 +1,21 @@
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-end
+}
+
+.inputs__block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input__name {
+  padding-right: 25px;
+}
+
+.from__input {
+  height: 25px;
+}

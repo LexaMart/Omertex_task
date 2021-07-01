@@ -1,6 +1,6 @@
 import './Form.css';
-import { EthernetComponent } from './formCopmponents/EternetComponent/EthernetComponent';
-import { WirelessComponent } from './formCopmponents/WirelessComponents/WirelessComponent';
+import { EthernetComponent } from './FormCopmponents/Ethernet/EthernetComponent';
+import { WirelessComponent } from './FormCopmponents/Wireless/WirelessComponent';
 
 export const Form: React.FunctionComponent = () => {
   return (

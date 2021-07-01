@@ -1,9 +1,11 @@
 import { combineReducers, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { useFormEhernetReducer } from './useFormReducer';
+import { useFormEhernetReducer } from './useFormEthernetReducer';
+import { useFormWifiReducer } from './useFormWifiReducer';
 
 export const rootReducer = combineReducers({
-  form: useFormEhernetReducer,
+  formEthernet: useFormEhernetReducer,
+  formWifi: useFormWifiReducer
 })
 
 export const store = createStore(rootReducer, composeWithDevTools());
