@@ -2,6 +2,7 @@ import { MenuItem, Select } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import { setWifiName } from '../../../../../../redux/useFormWifiReducer';
 import { useTypedSelector } from '../../../../../../redux/useTypedSelector.hook';
+import RotateLeftIcon from '@material-ui/icons/RotateLeft';
 import './WirelessName.css'
 
 export const WirelessNameComponent: React.FunctionComponent = () => {
@@ -28,6 +29,7 @@ export const WirelessNameComponent: React.FunctionComponent = () => {
           <MenuItem value={'TP-link15'}>TP-link15</MenuItem>
           <MenuItem value={'LexaMart'}>LexaMart</MenuItem>
         </Select>
+        <RotateLeftIcon className='refresh__img' style={{ paddingLeft: '10px' }} />
       </div>
     </div>
   )
