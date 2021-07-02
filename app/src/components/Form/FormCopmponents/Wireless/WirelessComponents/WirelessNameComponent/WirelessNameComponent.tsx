@@ -29,7 +29,7 @@ export const WirelessNameComponent: React.FunctionComponent = () => {
           <MenuItem value={'TP-link15'}>TP-link15</MenuItem>
           <MenuItem value={'LexaMart'}>LexaMart</MenuItem>
         </Select>
-        <RotateLeftIcon className='refresh__img' style={{ paddingLeft: '10px' }} />
+        <RotateLeftIcon  className='refresh__img' style={wifi ? {} : { opacity: 0.5, transition: 'all 0s' }} />
       </div>
     </div>
   )
