@@ -8,7 +8,7 @@ export const EnableWifiSecurityComponent: React.FunctionComponent = () => {
   const dispatch = useDispatch();
 
   const checkBoxHandler = () => {
-    dispatch(setWifiSecFlag(!wifiSec))
+    dispatch(setWifiSecFlag(!wifiSec));
   }
 
   return (

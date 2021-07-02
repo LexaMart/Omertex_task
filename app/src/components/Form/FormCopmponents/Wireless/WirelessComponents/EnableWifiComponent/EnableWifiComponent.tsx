@@ -8,8 +8,8 @@ const {wifi} = useTypedSelector(store => store.formWifi);
 const dispatch = useDispatch();
 
   const checkBoxHandler = () => {
-    dispatch(setWifiFlag(!wifi))
-  }
+    dispatch(setWifiFlag(!wifi));
+  };
 
   return (
     <FormControlLabel
