@@ -27,6 +27,10 @@ export const Form: React.FunctionComponent = () => {
   const ethernetStore = useTypedSelector(store => store.formEthernet);
   const wifiStore = useTypedSelector(store => store.formWifi);
 
+  const resetHandler = () => {
+    window.location.reload();
+  };
+
   const sumbitHandler = () => {
     if (verified) {
       console.log(objectToSend);
@@ -83,15 +87,18 @@ export const Form: React.FunctionComponent = () => {
         defGateaway: ethernetStore.ipFlag ? ethernetStore.defGateaway : '255.0.0.0',
         prefDns: ethernetStore.dnsFlag ? ethernetStore.prefDns : '0.0.0.0',
         alterDns: ethernetStore.alterDns ? ethernetStore.alterDns : '0.0.0.0',
-        ipAdressWifi: wifiStore.wifi && wifiStore.ipFlagWifi ? wifiStore.ipAdressWifi : '1.1.1.1',
-        subMaskWifi: wifiStore.wifi && wifiStore.ipFlagWifi ? wifiStore.subMaskWifi : '255.255.255.255',
-        defGateawayWifi: wifiStore.wifi && wifiStore.ipFlagWifi ? wifiStore.defGateawayWifi : '255.0.0.0',
-        prefDnsWifi: wifiStore.wifi && wifiStore.dnsFlagWifi ? wifiStore.prefDnsWifi : '0.0.0.0',
-        alterDnsWifi: wifiStore.wifi && wifiStore.dnsFlagWifi ? wifiStore.alterDnsWifi : '0.0.0.0',
-        wifiName: wifiStore.wifi ? wifiStore.wifiName : 'Default_Name',
-        wifiKey: wifiStore.wifi && wifiStore.wifiSec ? wifiStore.wifiKey : '123456aA!',
+        ipAdressWifi: wifiStore.wifi && wifiStore.ipFlagWifi ? wifiStore.ipAdressWifi : '',
+        subMaskWifi: wifiStore.wifi && wifiStore.ipFlagWifi ? wifiStore.subMaskWifi : '',
+        defGateawayWifi: wifiStore.wifi && wifiStore.ipFlagWifi ? wifiStore.defGateawayWifi : '',
+        prefDnsWifi: wifiStore.wifi && wifiStore.dnsFlagWifi ? wifiStore.prefDnsWifi : '',
+        alterDnsWifi: wifiStore.wifi && wifiStore.dnsFlagWifi ? wifiStore.alterDnsWifi : '',
+        wifiName: wifiStore.wifi ? wifiStore.wifiName : '',
+        wifiKey: wifiStore.wifi && wifiStore.wifiSec ? wifiStore.wifiKey : '',
       })
-    } else setVerified(false)
+    } else setVerified(false);
+    window.onbeforeunload = function () {
+      return false;
+    };
   }, [ethernetStore, wifiStore]);
 
   return (
@@ -105,7 +112,7 @@ export const Form: React.FunctionComponent = () => {
           <Button onClick={sumbitHandler} className='buttons' variant="contained" color="primary">
             Save
           </Button>
-          <Button className='buttons' variant="outlined" color='primary'>Cancel
+          <Button onClick={resetHandler} className='buttons' variant="outlined" color='primary'>Cancel
           </Button>
         </div>
       </form>
