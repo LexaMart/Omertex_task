@@ -21,6 +21,21 @@ export enum ACTIONS {
   SET_ALTER_WIFI_DNS = 'SET_ALTER_WIFI_DNS',
 }
 
+export interface ObjectToSend {
+  ipAdress: string,
+  subMask: string,
+  defGateaway: string,
+  prefDns: string,
+  alterDns: string,
+  ipAdressWifi: string,
+  subMaskWifi: string,
+  defGateawayWifi: string,
+  prefDnsWifi: string,
+  alterDnsWifi: string,
+  wifiName: string,
+  wifiKey: string,
+}
+
 export interface FormEthernetState {
   ipFlag: boolean,
   dnsFlag: boolean,
@@ -63,5 +78,6 @@ export interface RadioState {
   labelTrue: string,
   flagName: string,
   flag: boolean,
+  disabled?: boolean,
   callback: (flag: string, value: string) => any,
 }

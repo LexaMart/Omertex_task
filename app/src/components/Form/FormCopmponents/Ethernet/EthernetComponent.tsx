@@ -39,6 +39,7 @@ export const EthernetComponent: React.FunctionComponent = () => {
           dispatch(setIpAddress(event.target.value));
           return (true);
         } else {
+          dispatch(setIpAddress(''));
           return (false);
         }
       case 'subnetMask':
@@ -47,6 +48,7 @@ export const EthernetComponent: React.FunctionComponent = () => {
           dispatch(setSubMask(event.target.value));
           return true;
         } else {
+          dispatch(setSubMask(''))
           return false
         }
       case 'defGateaway':
@@ -55,6 +57,7 @@ export const EthernetComponent: React.FunctionComponent = () => {
           dispatch(setDefaultGate(event.target.value));
           return true;
         } else {
+          dispatch(setDefaultGate(''));
           return false;
         }
       case 'prefDns':
@@ -63,6 +66,7 @@ export const EthernetComponent: React.FunctionComponent = () => {
           dispatch(setPrefDns(event.target.value));
           return true;
         } else {
+          dispatch(setPrefDns(''));
           return false;
         }
       case 'alterDns':
@@ -71,6 +75,7 @@ export const EthernetComponent: React.FunctionComponent = () => {
           dispatch(setAlterDns(event.target.value));
           return (true);
         } else {
+          dispatch(setAlterDns(''));
           return false
         }
       default:
@@ -80,7 +85,7 @@ export const EthernetComponent: React.FunctionComponent = () => {
 
   return (
     <div className='content__block'>
-      <label className='block_title'>Ethernet Settings</label>
+      <label className='block__title'>Ethernet Settings</label>
       <RadioButtons labelFalse={'Obtain an IP address automatically (DHCP/BoostP)'} labelTrue={'Use the following IP address'} flagName={'ip'} flag={ipFlag} callback={radioHandler} />
       <div className='inputs'>
         <CustomInput label={'IP Address'} required={true} inputValue={'ip'} flag={ipFlag} callback={validateInputs} />
