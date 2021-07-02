@@ -1,11 +1,11 @@
 # Omertex Task
 
 ![image](https://user-images.githubusercontent.com/56229270/124313974-572d1f00-db7a-11eb-8ccd-67fd686b0a6d.png)
-<p>The task was to make a simillar form</p>
+<p>The task was to make a similar form</p>
 
 
 ![image](https://user-images.githubusercontent.com/56229270/124314492-2699b500-db7b-11eb-9aa9-29746b88cd23.png)
-<p>Form should fit the following requirements</p>
+<p>The form should fit the following requirements</p>
 
 ![image](https://user-images.githubusercontent.com/56229270/124314575-4630dd80-db7b-11eb-93b0-6e05ff8f6649.png)
 <p>Result of the work </p>
