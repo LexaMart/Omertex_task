@@ -1,11 +1,11 @@
-import { FormControlLabel, Radio, RadioGroup } from "@material-ui/core"
+import { FormControlLabel, Radio, RadioGroup } from "@material-ui/core";
 import { RadioState } from "../../../../types/types";
 
 export const RadioButtons: React.FunctionComponent<RadioState> = ({ labelFalse, labelTrue, flagName, flag, disabled = false, callback }) => {
 
   const radioChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     callback(flagName, event.target.value);
-  }
+  };
 
   return (
     <RadioGroup value={flag} onChange={radioChangeHandler}>

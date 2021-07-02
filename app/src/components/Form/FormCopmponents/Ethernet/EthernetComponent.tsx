@@ -14,16 +14,16 @@ export const EthernetComponent: React.FunctionComponent = () => {
     switch (flagName) {
       case 'ip':
         if (value === 'true') {
-          dispatch(setIpFlag(true))
+          dispatch(setIpFlag(true));
         } else {
-          dispatch(setIpFlag(false))
+          dispatch(setIpFlag(false));
         }
         break;
       case 'dns':
         if (value === 'true') {
-          dispatch(setDnsFlag(true))
+          dispatch(setDnsFlag(true));
         } else {
-          dispatch(setDnsFlag(false))
+          dispatch(setDnsFlag(false));
         }
         break;
       default:
@@ -48,8 +48,8 @@ export const EthernetComponent: React.FunctionComponent = () => {
           dispatch(setSubMask(event.target.value));
           return true;
         } else {
-          dispatch(setSubMask(''))
-          return false
+          dispatch(setSubMask(''));
+          return false;
         }
       case 'defGateaway':
         const defGateReg = new RegExp(/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/)
@@ -76,10 +76,10 @@ export const EthernetComponent: React.FunctionComponent = () => {
           return (true);
         } else {
           dispatch(setAlterDns(''));
-          return false
+          return false;
         }
       default:
-        return false
+        return false;
     }
   }
 

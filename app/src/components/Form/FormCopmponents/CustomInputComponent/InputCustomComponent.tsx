@@ -4,14 +4,14 @@ import './Inputs.css';
 
 
 export const CustomInput: React.FunctionComponent<InputState> = ({ label, inputValue, required, flag, callback }) => {
-  const [validated, setValidated] = useState<boolean>(true)
+  const [validated, setValidated] = useState<boolean>(true);
 
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (callback(event)) {
-      setValidated(true)
+      setValidated(true);
     } else {
-      setValidated(false)
-    }
+      setValidated(false);
+    };
   }
   return (
     <div className='inputs__block'>

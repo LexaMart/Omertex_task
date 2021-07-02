@@ -10,7 +10,7 @@ export const WirelessNameComponent: React.FunctionComponent = () => {
   const dispatch = useDispatch();
 
   const wifiNameChangeHandler = (event: React.ChangeEvent<{ value: unknown }>) => {
-    dispatch(setWifiName(event.target.value as string))
+    dispatch(setWifiName(event.target.value as string));
   };
 
   return (

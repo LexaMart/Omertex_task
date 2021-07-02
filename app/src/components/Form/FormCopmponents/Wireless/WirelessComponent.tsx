@@ -1,15 +1,15 @@
-import { CustomInput } from "../CustomInputComponent/InputCustomComponent"
-import { EnableWifiComponent } from "./WirelessComponents/EnableWifiComponent/EnableWifiComponent"
-import { EnableWifiSecurityComponent } from "./WirelessComponents/EnableWirelessSecurityComponent/EnableWirelessSecurityComponent"
-import { WirelessNameComponent } from "./WirelessComponents/WirelessNameComponent/WirelessNameComponent"
+import { CustomInput } from "../CustomInputComponent/InputCustomComponent";
+import { EnableWifiComponent } from "./WirelessComponents/EnableWifiComponent/EnableWifiComponent";
+import { EnableWifiSecurityComponent } from "./WirelessComponents/EnableWirelessSecurityComponent/EnableWirelessSecurityComponent";
+import { WirelessNameComponent } from "./WirelessComponents/WirelessNameComponent/WirelessNameComponent";
 import { useTypedSelector } from './../../../../redux/useTypedSelector.hook';
 import { useDispatch } from "react-redux";
 import { RadioButtons } from "../CustomRadioButtonsComponent/RadioButtonst";
 import { setAlterDns, setDefaultGate, setDnsFlag, setIpAddress, setIpFlag, setPrefDns, setSubMask, setWifiKey } from "../../../../redux/useFormWifiReducer";
 
 export const WirelessComponent: React.FunctionComponent = () => {
-  const { wifiSec, ipFlagWifi, dnsFlagWifi, wifi } = useTypedSelector(store => store.formWifi)
-  const dispatch = useDispatch()
+  const { wifiSec, ipFlagWifi, dnsFlagWifi, wifi } = useTypedSelector(store => store.formWifi);
+  const dispatch = useDispatch();
 
   const validateInputs = (event: React.ChangeEvent<HTMLInputElement>) => {
     switch (event.target.name) {
@@ -76,16 +76,16 @@ export const WirelessComponent: React.FunctionComponent = () => {
     switch (flagName) {
       case 'ipWifi':
         if (value === 'true') {
-          dispatch(setIpFlag(true))
+          dispatch(setIpFlag(true));
         } else {
-          dispatch(setIpFlag(false))
+          dispatch(setIpFlag(false));
         }
         break;
       case 'dnsWifi':
         if (value === 'true') {
-          dispatch(setDnsFlag(true))
+          dispatch(setDnsFlag(true));
         } else {
-          dispatch(setDnsFlag(false))
+          dispatch(setDnsFlag(false));
         }
         break;
       default:

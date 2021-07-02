@@ -35,7 +35,7 @@ export const Form: React.FunctionComponent = () => {
     if (verified) {
       console.log(objectToSend);
     } else {
-      alert('Fields have an incorrect values, fix it and retry!')
+      alert('Fields have an incorrect values, fix it and retry!');
     }
   }
   const validateEthernetIpData = (): boolean => {
