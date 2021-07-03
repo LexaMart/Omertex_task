@@ -73,6 +73,36 @@ export const Form: React.FunctionComponent = () => {
     } else return true;
   };
 
+  const ipAdressWifiSetter = (): string => {
+    if (wifiStore.wifi && wifiStore.ipFlagWifi) {
+      return wifiStore.ipAdressWifi;
+    }
+    else if (wifiStore.wifi && !wifiStore.ipFlagWifi) {
+      return '111.111.111.111'
+    }
+    else return '';
+  };
+
+  const subnetMaskWifi = (): string => {
+    if (wifiStore.wifi && wifiStore.ipFlagWifi) {
+      return wifiStore.subMaskWifi;
+    }
+    else if (wifiStore.wifi && !wifiStore.ipFlagWifi) {
+      return '255.255.255.255'
+    }
+    else return '';
+  };
+
+  const prefDnsWifi = (): string => {
+    if (wifiStore.wifi && wifiStore.dnsFlagWifi) {
+      return wifiStore.prefDnsWifi;
+    }
+    else if (wifiStore.wifi && !wifiStore.dnsFlagWifi) {
+      return '9.9.9.9'
+    }
+    else return '';
+  };
+
   useEffect(() => {
     if (validateEthernetIpData()
       && validateEthernetDnsData()
@@ -87,10 +117,10 @@ export const Form: React.FunctionComponent = () => {
         defGateaway: ethernetStore.ipFlag ? ethernetStore.defGateaway : '255.0.0.0',
         prefDns: ethernetStore.dnsFlag ? ethernetStore.prefDns : '0.0.0.0',
         alterDns: ethernetStore.alterDns ? ethernetStore.alterDns : '0.0.0.0',
-        ipAdressWifi: wifiStore.wifi && wifiStore.ipFlagWifi ? wifiStore.ipAdressWifi : '',
-        subMaskWifi: wifiStore.wifi && wifiStore.ipFlagWifi ? wifiStore.subMaskWifi : '',
+        ipAdressWifi: ipAdressWifiSetter(),
+        subMaskWifi: subnetMaskWifi(),
         defGateawayWifi: wifiStore.wifi && wifiStore.ipFlagWifi ? wifiStore.defGateawayWifi : '',
-        prefDnsWifi: wifiStore.wifi && wifiStore.dnsFlagWifi ? wifiStore.prefDnsWifi : '',
+        prefDnsWifi: prefDnsWifi(),
         alterDnsWifi: wifiStore.wifi && wifiStore.dnsFlagWifi ? wifiStore.alterDnsWifi : '',
         wifiName: wifiStore.wifi ? wifiStore.wifiName : '',
         wifiKey: wifiStore.wifi && wifiStore.wifiSec ? wifiStore.wifiKey : '',
