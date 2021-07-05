@@ -27,7 +27,7 @@
   <li>Gateaway(wifi/ethernet): 0.0.0.0 - 255.255.255.255 </li>
   <li>Subnet Mask(wifi/ethernet): Easier to give an examples. 255.0.0.0, 192.0.0.0</li>
   <li>DNS(wifi/ethernet): 0.0.0.0 - 255.255.255.255</li>
-  <li>Wifi password: 6- 18 symbols, should contain at least one letter, one number, one special mark. EXAMPLE: 123456AA! </li>
+  <li>Wifi password: at least 8 symbols, should contain at least one letter, one number, one special mark. EXAMPLE: 123456AA! </li>
 </ul>
 
 <h1>DEPLOY: https://optimistic-blackwell-7949c3.netlify.app/</h1>
